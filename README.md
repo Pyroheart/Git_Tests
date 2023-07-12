@@ -1,3 +1,2 @@
 # Git_Tests
-Only a short exercise to apply Git Basics
-I had already seen them but needed to rework on them.
+This is just a little exercise to apply the Git basics that I'd already seen but needed to work on.
