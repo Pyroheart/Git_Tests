@@ -1,0 +1,73 @@
+https://cours.duclos.xyz/?md=./md/versionning/Git.md#/1/1
+
+Outils de versionning : Cvs / subversion (old) /----/ Pyrul(wip complexe) / fossile (git simplifié) / git (aujourd'hui)
+
+SSH une clé privée pr ordinateur
+
+
+initialiser:
+cd project folder
+git init > create a .git folder
+
+git clone url (dossier pour le mettre qqpart) 
+--bare (Initialize a repository without the working directory branch. Used for initialisation of a remote repository)
+
+
+git remote : 
+Define the remote repository linked to current repository
+git remote add <name> <url>
+git remote remove <name> # forget the remote
+git remote -v # List remotes
+git remote set-url origin <url> # update a url
+
+
+git add:
+Prepare a future commit and add a given file in it
+git add <filename>
+git add <foldername>
+git add . # try not to use it
+
+
+git commit:
+Make a save backup of the added modifications
+git commit -m "My commit message name"
+git commit -am "Another commit" # add all local modifications and commit. Try not to use it
+
+
+git commit --amend:
+Add staged modifications to the previous commit. This can also be used to rename the previous commit.
+git commit --amend -m "Renaming the previous commit"
+git commit --amend --no-edit # Only adds the staged without renaming it
+
+
+git ignore:
+All files you wish to ignore from git tracking can be mentionned in a .gitignore file. It is possible to create new .gitignore files in some folders.
+
+
+git log:
+View git history.
+git log
+git log --oneline
+
+
+git show:
+Shows details on given element
+git show <commit-sha>
+
+
+git status:
+View local modifications and file statuses. This way you can see what is untracked or what is modified.
+git status
+
+
+git push:
+Send the local commits to the remote repository
+git push ­‐u <remote> <branch>
+
+
+git pull:
+Pull modifications from remote repository and apply to current folder
+git pull <remote> <branch>
+
+git rebase
+git pull --rebase <remote> <branch>
